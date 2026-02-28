@@ -17,7 +17,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            docker pull shatatarakau/node-app:latest
+            docker pull shatatarakau/demo-node-app:latest
             docker stop app || true
             docker rm app || true
             docker run -d -p 80:3000 --name app shatatarakau/demo-node-app:latest
